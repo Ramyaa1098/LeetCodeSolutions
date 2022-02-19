@@ -1,0 +1,4 @@
+#operations on string
+#check by converting to list
+str1 = str1.casefold()
+list[str1.reversed()] == list[str1]

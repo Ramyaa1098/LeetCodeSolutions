@@ -1,0 +1,6 @@
+#Seed is used to set an initial value to start the random number and the example below demonstrates, if we repeat/ use the same seed value twice, we get the same answer
+random.seed(20)
+print(random.random())
+
+random.seed(20)
+print(random.random())

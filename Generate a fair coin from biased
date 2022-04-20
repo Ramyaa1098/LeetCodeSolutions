@@ -1,5 +1,6 @@
 from random import random
 def biasedCoin():
+#the random function generates any number in the range [0.0,1.0), so we are returning essentially a T/F (1/0 because we have int) if the number is less than the threshold
     return int(random() < 0.2)
 
 def faircoin(biasedcoin):

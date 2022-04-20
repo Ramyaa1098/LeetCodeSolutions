@@ -1,0 +1,19 @@
+#The logic is to understand that we need to iterate over the rows of A , which is same as the len(A) and then iterate over the 
+#column of B. For each multiplication, the k loop completes the addition with the 1st row and the 1st column, look the arrangement of a matrix for this in python
+
+def multiply_matrix(A,B):
+    result =  [[0 for i in range(len(Y[0]))] for j in range(len(X))]
+    for i in range(len(A)):
+        for j in range(len((B)[0])):
+            for k in range(len(B)):
+                result[i][j] += A[i][k] * B[k][j]
+    return result
+    
+    X = [[12,7,3],
+    [4 ,5,6],
+    [7 ,8,9]]
+# 3x4 matrix
+Y = [[5,8,1,2],
+    [6,7,3,0],
+    [4,5,9,1]]
+multiply_matrix(X,Y)

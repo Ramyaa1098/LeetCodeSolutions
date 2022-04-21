@@ -1,0 +1,10 @@
+def maxProd(arr):
+    arr.sort()
+    n = len(arr)
+    return max((arr[0]*arr[1]),(arr[n-1]*arr[n-2]))
+
+#max triplet
+def maxProd3nos(arr):
+    arr.sort()
+    n = len(arr)
+    return max((arr[0]*arr[1]*arr[n-1]),(arr[n-1]*arr[n-2]*arr[n-3]))

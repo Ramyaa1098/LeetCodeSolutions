@@ -1,0 +1,8 @@
+li = ["eat","tea","tan","ate","nat","bat"]
+#sorted returns a sorted list of the specified object
+#"".join(sorted(word)), combines each list to a single word
+for word in li:
+    sortedWord1 = sorted(word)
+    sortedWord2 = "".join(sorted(word))
+    print(sortedWord1)
+    print(sortedWord2)

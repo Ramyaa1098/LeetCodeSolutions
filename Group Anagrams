@@ -1,0 +1,14 @@
+class Solution(object):
+    def groupAnagrams(self, strs):
+        dicty = {}
+        if len(strs) == 0:
+            return [""]
+        if len(strs) == 1:
+            return [strs]
+        for word in strs:
+            sortedWord = "".join(sorted(word))
+            if sortedWord not in dicty:
+                dicty[sortedWord] = [word]
+            else:
+                dicty[sortedWord].append(word)
+        return [value for key,value in dicty.items()]

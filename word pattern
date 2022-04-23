@@ -1,0 +1,30 @@
+#first is a lengthy my solution
+#next is with map, if we have the comparison between 2 strings or 2 numbers to find the missing element or sam pattern, use zip
+
+#my case - fails one test case
+ def wordPattern(self, pattern, s):
+        pattern_dict = {}
+        for i,elem in enumerate(pattern):
+            if elem not in pattern_dict:
+                pattern_dict[elem] = [i]
+            else:
+                pattern_dict[elem].append(i)
+        pattern_list = [value for key,value in pattern_dict.items()]
+
+        s_dict = {}
+        for i,elem in enumerate(s.split(" ")):
+            if elem not in s_dict:
+                s_dict[elem] = [i]
+            else:
+                s_dict[elem].append(i)
+        s_list = [value for key,value in s_dict.items()]
+
+        if  pattern_list == s_list:
+            return True
+        else:
+            return False
+            
+            
+ 
+ 
+ 

@@ -1,0 +1,16 @@
+#Modifying the existing array to add all the unique values, without having any other array added to it
+#also the trick for the string length - range(len(nums)-1) or range(1, len(nums))
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        x = 1
+        for i in range(1,len(nums)):
+            if nums[i] != nums[i-1]:
+                nums[x] = nums[i]
+                x+=1
+        return x
+        

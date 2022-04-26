@@ -1,0 +1,5 @@
+list_num = [3,4,2,1]
+num = 0
+for i in range(len(list_num)):
+    num += list_num[i]*pow(10, len(list_num)-1-i)
+print(num)

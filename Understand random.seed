@@ -4,3 +4,4 @@ print(random.random())
 
 random.seed(20)
 print(random.random())
+#random.random() returns a floating point number in the range [0,1.0)

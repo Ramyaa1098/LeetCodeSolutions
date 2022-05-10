@@ -1,5 +1,6 @@
 #Modifying the existing array to add all the unique values, without having any other array added to it
 #also the trick for the string length - range(len(nums)-1) or range(1, len(nums))
+#x is incremeneted only when they are unequal
 
 class Solution(object):
     def removeDuplicates(self, nums):

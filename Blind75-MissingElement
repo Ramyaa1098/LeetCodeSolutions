@@ -1,0 +1,13 @@
+class Solution(object):
+    def missingNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums.sort()
+        n = len(nums)
+        l1 = [i for i in range(n+1)]
+        for n1,n2 in zip(l1,nums):
+            if n1!=n2:
+                return n1
+        return l1[-1]

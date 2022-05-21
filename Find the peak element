@@ -1,0 +1,9 @@
+# O(N) complexity where we compare each element to the next and thats enough
+def peak(nums):
+  for i in nums:
+    if nums[i]>nums[i+1]:
+      return i
+    return n-1
+    
+def rec_peak(nums,l,r):
+  if l==r

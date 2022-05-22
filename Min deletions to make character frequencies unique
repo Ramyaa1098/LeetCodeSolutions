@@ -1,0 +1,16 @@
+class Solution:
+    def minDeletions(self, s: str) -> int:
+        hashmap = {}
+        min_del = 0
+        for letter in s:
+            if letter in hashmap:
+                hashmap[letter] +=1
+            else:
+                hashmap[letter] = 1
+        seen = set()
+        for letter, freq in hashmap.items():
+            while freq>0 and freq in seen:
+                freq -=1
+                min_del +=1
+            seen.add(freq)
+        return min_del

@@ -1,0 +1,33 @@
+class MinStack:
+
+    def __init__(self):
+        self.items = []
+        
+
+    def push(self, val: int) -> None:
+        minVal = min(val, self.items[-1][1] if self.items else val)
+        return self.items.append((val, minVal))
+        # remember self. is used only for class variables because that is for object initialization, hence not used for val
+
+    def pop(self) -> None:
+        return self.items.pop()
+        
+
+    def top(self) -> int:
+        return self.items[-1][0]
+        
+
+    def getMin(self) -> int:
+        # in constant time, have 2 stacks where the second will tell us the min posistion at each point on the stack, but when we pop, we pop elements from both the stacks
+        #But since another stack increases the space complexity, we can use a tuple 
+        return self.items[-1][1]
+        
+        
+
+
+# Your MinStack object will be instantiated and called as such:
+# obj = MinStack()
+# obj.push(val)
+# obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.getMin()

@@ -1,0 +1,17 @@
+class Solution:
+    def characterReplacement(self, s: str, k: int) -> int:
+        l = 0
+        res = 0
+        count = {}
+        for r in range(len(s)):
+            word_len = r-l+1
+            if s[r] not in count:
+                count[s[r]] = 1
+            else:
+                count[s[r]]+=1
+            if (word_len - max(count.values()) <= k):
+                res = max(res,word_len)
+            else:
+                count[s[l]]-=1
+                l+=1
+        return res
